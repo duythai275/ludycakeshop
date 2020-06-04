@@ -1,0 +1,38 @@
+/* Footer */
+div.footerContainer {
+    width: 95%;
+    margin: auto;
+}
+
+div.contact img {
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    margin: auto;
+}
+
+div.contact {
+    border-top: .0625rem solid #d9d9d6;
+    border-bottom: .0625rem solid #d9d9d6;
+}
+
+div.footer {
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.socialNetwork {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.socialNetwork img {
+    padding:  10px 15px;
+    width: auto;
+}
+
+div.copyright {
+    align-items: center;
+}
