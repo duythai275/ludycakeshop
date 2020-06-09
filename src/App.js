@@ -11,6 +11,7 @@ import Homepage from './components/homepage/homepage.component';
 import Shop from './components/shop/shop.component';
 import { Promotion } from './components/promotion/promotion.component';
 import { Aboutus } from './components/aboutus/aboutus.component';
+import Categorypage from './components/categorypage/categoryProducts.component';
 
 import { fetchCategories } from './redux/category/category.action';
 
@@ -46,6 +47,7 @@ function App({ setCategories }) {
             <Route exact path="/shop" component={Shop} />
             <Route exact path='/promotion' component={Promotion} />
             <Route exact path='/aboutus' component={Aboutus} />
+            <Route exact path='/category/:categoryid' component={Categorypage} />
           </Switch>
         </div>
       </div>

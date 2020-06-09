@@ -1,15 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import './shop.styles.css';
 import { config } from '../../config';
+
+import { selectCategories } from '../../redux/category/category.selector';
 
 const Shop = ({ categories }) => (
     <div className="shoppingPage">
         {
             categories.map( category => (
                 <div key={category._id} className="category">
-                    <h1 className="title">{category.name}</h1>
+                    <h1 className="title">
+                        <Link to={`/category/${category._id}`}>{category.name}</Link>
+                    </h1>
+                    
                     <div className="items">
                         {
                             category.products.filter( (product, index) => index < 4 ).map( product => 
@@ -29,8 +36,8 @@ const Shop = ({ categories }) => (
     </div>
 )
 
-const mapStateToProps = state => ({
-    categories: state.categories.categories
+const mapStateToProps = createStructuredSelector({
+    categories: selectCategories
 });
   
 export default connect(mapStateToProps)(Shop);

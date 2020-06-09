@@ -4,5 +4,5 @@ const selectCategory = state => state.categories;
 
 export const selectCategories = createSelector(
     [selectCategory],
-    categories => cart.cartItems
+    categories => categories.categories
   );

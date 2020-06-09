@@ -1,14 +1,18 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import './homepage.styles.css';
 import { config } from '../../config';
+
+import { selectCategories } from '../../redux/category/category.selector';
     
-const Homepage = ({ categories }) => {
+const Homepage = ({ categories, history }) => {
 
   return ( 
     categories.map( category => 
-      <div className="menuItem" key={category._id}>
+      <div className="menuItem" key={category._id} onClick={() => history.push(`/category/${category._id}`)}>
         <div className="cateBackground"
           style={{
             backgroundImage: `url("${config.backendURL}/categories/${category.image}")`
@@ -23,8 +27,8 @@ const Homepage = ({ categories }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  categories: state.categories.categories
+const mapStateToProps = createStructuredSelector({
+  categories: selectCategories
 });
 
-export default connect(mapStateToProps)(Homepage);
+export default withRouter(connect(mapStateToProps)(Homepage));
