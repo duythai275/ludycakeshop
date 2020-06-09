@@ -1,8 +1,8 @@
 import React from 'react';
 
-import addressImage from '../../photos/footer.jpg';
-import instagramIcon from '../../photos/social-instagram.svg';
-import facebookIcon from '../../photos/social-media-facebook-1.svg';
+import addressImage from '../../assets/footer.jpg';
+import instagramIcon from '../../assets/social-instagram.svg';
+import facebookIcon from '../../assets/social-media-facebook-1.svg';
 
 import './footer.styles.css';
 
