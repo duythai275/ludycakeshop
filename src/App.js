@@ -9,8 +9,6 @@ import { Header } from './components/header/header.component';
 import { Footer } from './components/footer/footer.component';
 import Homepage from './components/homepage/homepage.component';
 import Shop from './components/shop/shop.component';
-import { Promotion } from './components/promotion/promotion.component';
-import { Aboutus } from './components/aboutus/aboutus.component';
 import Categorypage from './components/categorypage/categoryProducts.component';
 
 import { fetchCategories } from './redux/category/category.action';
@@ -35,7 +33,7 @@ function App({ setCategories }) {
     //     })
     //   )
     // })
-  });
+  }, []);
 
   return (
     <div className="appWrapper">
@@ -45,8 +43,6 @@ function App({ setCategories }) {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/shop" component={Shop} />
-            <Route exact path='/promotion' component={Promotion} />
-            <Route exact path='/aboutus' component={Aboutus} />
             <Route exact path='/category/:categoryid' component={Categorypage} />
           </Switch>
         </div>

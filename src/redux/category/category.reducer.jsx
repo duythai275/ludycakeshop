@@ -4,7 +4,8 @@ const INITIAL_STATE = {
     categories: [
         { 
             _id: 2,name: "Cakes Rolls",
-            image: "CakeRolls_Category",products: [
+            image: "CakeRolls_Category",
+            products: [
                 { 
                     _id: 18,
                     name: "Vanila Cake Rolls",

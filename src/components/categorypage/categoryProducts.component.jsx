@@ -9,7 +9,7 @@ import { config } from "../../config";
 import { selectCategories } from '../../redux/category/category.selector';
 
 const Categorypage = ({ categories, match }) => {
-    const category = categories.find( c => c._id === match.params.categoryid );
+    const category = categories.find( c => `${c._id}` === match.params.categoryid );
     return ( category === undefined ) ? "" : 
             <div className="shoppingPage">
                 <div className="category">
@@ -18,7 +18,7 @@ const Categorypage = ({ categories, match }) => {
                     {
                         category.products.map( product => 
                             <div key={product._id} className="item">
-                                <div className="image" style={{ backgroundImage: `url(${config.backendURL}/products/${product.image})` }}/>
+                                <div className="image" style={{ backgroundImage: `url(${config.backendURL}/${product.image}.jpg)` }}/>
                                 <div className="itemFooter">
                                     <span className="name">{product.name}</span>
                                     <span className="price">${product.price}</span>

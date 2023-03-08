@@ -15,7 +15,7 @@ const Homepage = ({ categories, history }) => {
       <div className="menuItem" key={category._id} onClick={() => history.push(`/category/${category._id}`)}>
         <div className="cateBackground"
           style={{
-            backgroundImage: `url("${config.backendURL}/categories/${category.image}")`
+            backgroundImage: `url("${config.backendURL}/${category.image}.jpg")`
           }}
         ></div>
         <div className="cateItem">
