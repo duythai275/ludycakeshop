@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ludycakeshop/static/css/main.c9d1fc93.chunk.css",
+    "main.js": "/ludycakeshop/static/js/main.7f1e8910.chunk.js",
+    "main.js.map": "/ludycakeshop/static/js/main.7f1e8910.chunk.js.map",
+    "runtime-main.js": "/ludycakeshop/static/js/runtime-main.dc767c9d.js",
+    "runtime-main.js.map": "/ludycakeshop/static/js/runtime-main.dc767c9d.js.map",
+    "static/js/2.59810dae.chunk.js": "/ludycakeshop/static/js/2.59810dae.chunk.js",
+    "static/js/2.59810dae.chunk.js.map": "/ludycakeshop/static/js/2.59810dae.chunk.js.map",
+    "index.html": "/ludycakeshop/index.html",
+    "precache-manifest.f8571fc7a8825ec0df3e94c9b515c71c.js": "/ludycakeshop/precache-manifest.f8571fc7a8825ec0df3e94c9b515c71c.js",
+    "service-worker.js": "/ludycakeshop/service-worker.js",
+    "static/css/main.c9d1fc93.chunk.css.map": "/ludycakeshop/static/css/main.c9d1fc93.chunk.css.map",
+    "static/js/2.59810dae.chunk.js.LICENSE.txt": "/ludycakeshop/static/js/2.59810dae.chunk.js.LICENSE.txt",
+    "static/media/footer.jpg": "/ludycakeshop/static/media/footer.6b056160.jpg",
+    "static/media/shopping-bag.30f07071.svg": "/ludycakeshop/static/media/shopping-bag.30f07071.svg",
+    "static/media/social-instagram.svg": "/ludycakeshop/static/media/social-instagram.4d631ecd.svg",
+    "static/media/social-media-facebook-1.svg": "/ludycakeshop/static/media/social-media-facebook-1.b299e674.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc767c9d.js",
+    "static/js/2.59810dae.chunk.js",
+    "static/css/main.c9d1fc93.chunk.css",
+    "static/js/main.7f1e8910.chunk.js"
+  ]
+}
