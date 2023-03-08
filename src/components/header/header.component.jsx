@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
 import './header.styles.css';
 import ShoppingContext from '../../contexts/shoppingCart.context';
-import logo from '../../assets/logo.jpg';
 
 const CartIcon = () => { 
     const { cartItems } = useContext(ShoppingContext);
@@ -26,7 +25,7 @@ export const Header = () => (
             </div>
             <div className="options">
                 <Link className="option" to="/shop">SHOP</Link>
-                <Link className="option" to="/shoppingCart">
+                <Link className="option" to="/checkout">
                     <CartIcon />
                 </Link>
             </div>
