@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -10,12 +10,13 @@ import { Footer } from './components/footer/footer.component';
 import Homepage from './components/homepage/homepage.component';
 import Shop from './components/shop/shop.component';
 import Categorypage from './components/categorypage/categoryProducts.component';
-
+import Productpage from './components/productpage/product.page';
+import ShoppingContext from './contexts/shoppingCart.context';
 import { fetchCategories } from './redux/category/category.action';
 
 function App({ setCategories }) {
 
-  useEffect( () => {
+  // useEffect( () => {
     // Promise.all([
     //   fetch(`${config.backendURL}/category`).then( res => res.json()),
     //   fetch(`${config.backendURL}/product`).then( res => res.json()),
@@ -33,22 +34,30 @@ function App({ setCategories }) {
     //     })
     //   )
     // })
-  }, []);
+  // }, []);
+
+  const [cartItems,setCartItems] = useState([]);
+  const handleCartItems = newCartItems => {
+    setCartItems(newCartItems);
+  }
 
   return (
-    <div className="appWrapper">
-      <Header />
-      <div className="contentContainer">
-        <div className="content">
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path='/category/:categoryid' component={Categorypage} />
-          </Switch>
+    <ShoppingContext.Provider value={{cartItems, handleCartItems}}>
+      <div className="appWrapper">
+        <Header />
+        <div className="contentContainer">
+          <div className="content">
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/shop" component={Shop} />
+              <Route exact path='/category/:categoryid' component={Categorypage} />
+              <Route exact path='/product/:productid' component={Productpage} />
+            </Switch>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </ShoppingContext.Provider>
   );
 }
 

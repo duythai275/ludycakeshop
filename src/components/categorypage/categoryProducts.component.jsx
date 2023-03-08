@@ -8,7 +8,7 @@ import { config } from "../../config";
 
 import { selectCategories } from '../../redux/category/category.selector';
 
-const Categorypage = ({ categories, match }) => {
+const Categorypage = ({ categories, match, history }) => {
     const category = categories.find( c => `${c._id}` === match.params.categoryid );
     return ( category === undefined ) ? "" : 
             <div className="shoppingPage">
@@ -17,7 +17,7 @@ const Categorypage = ({ categories, match }) => {
                     <div className="items">
                     {
                         category.products.map( product => 
-                            <div key={product._id} className="item">
+                            <div key={product._id} className="item" onClick={() => history.push(`/product/${product._id}`)}>
                                 <div className="image" style={{ backgroundImage: `url(${config.backendURL}/${product.image}.jpg)` }}/>
                                 <div className="itemFooter">
                                     <span className="name">{product.name}</span>

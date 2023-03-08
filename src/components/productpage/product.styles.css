@@ -1,0 +1,70 @@
+.addToCartButton {
+    position: relative;
+    margin: 0px;
+    padding: 7px 30px;
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    user-select: none;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F15C62;
+    box-shadow: transparent 0px 0px 0px 1px inset;
+    color: rgb(255, 255, 255);
+}
+
+.addToCartButton span {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    height: 60vh;
+}
+
+.halfPage1 {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+    width: 50%;
+}
+
+.halfPage {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+    width: 50%;
+    margin: 20px 0px 0px 20px;
+}
+
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.productImage img{
+    width: 100%;
+}
+
+.productActions {
+    margin-top: 10px;
+    margin-left: 0px;
+}
