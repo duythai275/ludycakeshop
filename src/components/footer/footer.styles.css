@@ -1,7 +1,7 @@
 /* Footer */
 div.footerContainer {
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 div.contact img {
@@ -9,6 +9,14 @@ div.contact img {
     justify-content: center;
     width: 450px;
     margin: auto;
+}
+
+div.contact table {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    width: 450px;
+    margin: 10px auto;
 }
 
 div.contact {
@@ -35,4 +43,10 @@ div.socialNetwork img {
 
 div.copyright {
     align-items: center;
+}
+
+span.footerTitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: #F15C62;
 }
