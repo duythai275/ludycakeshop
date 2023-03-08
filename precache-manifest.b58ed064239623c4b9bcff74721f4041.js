@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "39578036ebceb0e2d30a1145ae55a151",
+    "revision": "fa41b918a68106fe212b77834df0cbcb",
     "url": "/ludycakeshop/index.html"
   },
   {
-    "revision": "f123ad9730c2bd5e54e4",
+    "revision": "8ff5fa849f0e80540038",
     "url": "/ludycakeshop/static/css/main.c9d1fc93.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ludycakeshop/static/js/2.59810dae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f123ad9730c2bd5e54e4",
-    "url": "/ludycakeshop/static/js/main.7f1e8910.chunk.js"
+    "revision": "8ff5fa849f0e80540038",
+    "url": "/ludycakeshop/static/js/main.30cf5979.chunk.js"
   },
   {
     "revision": "a945f1686ade990fb26a",
