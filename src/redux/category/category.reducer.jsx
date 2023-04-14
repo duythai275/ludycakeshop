@@ -60,24 +60,6 @@ const INITIAL_STATE = {
                     name: "Tres Leche Cake",
                     price: 9.25,
                     image: ""
-                },
-                { 
-                    _id: 31,
-                    name: "Yema Custard Cake",
-                    price: 9.25,
-                    image: "YemaCustardCake"
-                },
-                { 
-                    _id: 32,
-                    name: "Ube Yema Cakes",
-                    price: 9.25,
-                    image: "YemaUbeCustardCake"
-                },
-                { 
-                    _id: 33,
-                    name: "Tres Leche Cake",
-                    price: 9.25,
-                    image: ""
                 }
             ]
         },
@@ -226,6 +208,12 @@ const INITIAL_STATE = {
                     image: ""
                 }
             ]
+        },
+        { 
+            _id: 5,
+            name: "Breads",
+            image: "Breads_Category",
+            products: []
         }
     ]
 };

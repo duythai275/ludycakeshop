@@ -1,3 +1,3 @@
 export const config = {
-    backendURL: "http://localhost:3000/Products"
+    backendURL: "https://duythai275.github.io/ludycakeshop/Products"
 }

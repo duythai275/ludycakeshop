@@ -11,6 +11,7 @@ import Homepage from './components/homepage/homepage.component';
 import Shop from './components/shop/shop.component';
 import Categorypage from './components/categorypage/categoryProducts.component';
 import Productpage from './components/productpage/product.page';
+import BulkorderPage from './components/bulkorder/bulkorder.page';
 import ShoppingContext from './contexts/shoppingCart.context';
 import Checkoutpage from './components/checkoutPage/checkout.page';
 import { fetchCategories } from './redux/category/category.action';
@@ -50,10 +51,12 @@ function App({ setCategories }) {
           <div className="content">
             <Switch>
               <Route exact path="/" component={Homepage} />
+              <Route exact path="/ludycakeshop" component={Homepage} />
               <Route exact path="/shop" component={Shop} />
               <Route exact path="/checkout" component={Checkoutpage} />
               <Route exact path='/category/:categoryid' component={Categorypage} />
               <Route exact path='/product/:productid' component={Productpage} />
+              <Route exact path='/bulkorder' component={BulkorderPage} />
             </Switch>
           </div>
         </div>

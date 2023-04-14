@@ -2,8 +2,6 @@
 div.headerContainer {
     width: 100%;
     background-color: #F15C62;
-    /* position: sticky;
-    top: 0; */
 }
 
 div.header {
@@ -14,14 +12,13 @@ div.header {
     margin: auto;
 }
 
-div.logo-container {
+.options1 {
+    width: 50%;
     height: 100%;
-    width: 70px;
-    padding: 25px;
-}
-
-img.logo {
-    height: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
 }
 
 .options {
@@ -40,11 +37,12 @@ img.logo {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .cart-icon-container {
-    width: 45px;
-    height: 45px;
+    width: 80px;
+    height: 80px;
     position: relative;
     display: flex;
     align-items: center;
@@ -53,13 +51,13 @@ img.logo {
   }
   
   .shopping-icon {
-    width: 24px;
-    height: 24px;
+    width: 37px;
+    height: 37px;
   }
 
   .item-count {
     position: absolute;
-    font-size: 10px;
+    font-size: 17px;
     font-weight: bold;
-    bottom: 12px;
+    bottom: 23px;
   }

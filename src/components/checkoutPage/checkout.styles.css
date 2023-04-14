@@ -5,7 +5,7 @@
 	justify-content: flex-start;
 	align-items: stretch;
 	align-content: stretch;
-    width: 100%;
+    width: 49%;
 }
 
 .checkoutTitle {
@@ -21,6 +21,10 @@
 
 .customerSection table {
     width: 100%;
+}
+
+.cartItems {
+    margin-top: 35px;
 }
 
 .footerTable {

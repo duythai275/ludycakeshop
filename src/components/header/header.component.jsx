@@ -15,13 +15,10 @@ const CartIcon = () => {
 export const Header = () => (
     <div className="headerContainer">
         <div className="header">
-            <div className="logoContainer">
+            <div className="options1">
                 <Link className="option" to="/">
                     <div>LUDY</div>
                 </Link>
-            </div>
-            <div>
-                
             </div>
             <div className="options">
                 <Link className="option" to="/shop">SHOP</Link>
