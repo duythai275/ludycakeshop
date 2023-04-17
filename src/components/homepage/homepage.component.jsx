@@ -11,18 +11,25 @@ import { selectCategories } from '../../redux/category/category.selector';
 const Homepage = ({ categories, history }) => {
 
   return ( 
-    categories.map( category => 
-      <div className="menuItem" key={category._id} onClick={() => history.push(`/category/${category._id}`)}>
-        <div className="cateBackground"
-          style={{
-            backgroundImage: `url("${config.backendURL}/${category.image}.jpg")`
-          }}
-        ></div>
+    categories.map( category => {
+
+      const cateBackground = {
+        width: "100%",
+        height: "100%",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundImage: `url(data:image;base64,${category.categoryImage})`
+      };
+      
+      return(
+      <div className="menuItem" key={category.categoryID} onClick={() => history.push(`/category/${category.categoryID}`)}>
+        <div style={cateBackground} ></div>
         <div className="cateItem">
-          <h1 className="cateTitle">{category.name}</h1>
+          <h1 className="cateTitle">{category.categoryName}</h1>
           <span className="cateSubTitle">SHOP NOW</span>
         </div>
-      </div>
+      </div>)
+      }
     )
   )
 }

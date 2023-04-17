@@ -19,3 +19,14 @@ table.orderForm tr td {
 tr.categoryName {
     background-color: #f2f2f2;
 }
+
+.submitBulkOrder {
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+}
+
+.historicalOrderWrapper {
+    overflow-y: auto;
+    height: 500px;
+}

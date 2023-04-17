@@ -15,28 +15,28 @@ import BulkorderPage from './components/bulkorder/bulkorder.page';
 import ShoppingContext from './contexts/shoppingCart.context';
 import Checkoutpage from './components/checkoutPage/checkout.page';
 import { fetchCategories } from './redux/category/category.action';
+import { fetchProducts } from './redux/product/product.action';
+import { Spin } from 'antd';
 
-function App({ setCategories }) {
-
-  // useEffect( () => {
-    // Promise.all([
-    //   fetch(`${config.backendURL}/category`).then( res => res.json()),
-    //   fetch(`${config.backendURL}/product`).then( res => res.json()),
-    //   fetch(`${config.backendURL}/productCategory`).then( res => res.json())
-    // ])
-    // .then( arr => {
-    //   setCategories( 
-    //     arr[0].map( category => {
-    //       category["products"] = arr[2].filter( 
-    //                                 productCategory => category._id === productCategory.category 
-    //                              ).map( 
-    //                                   productCategory => arr[1].find( product => product._id === productCategory.product ) 
-    //                              );
-    //       return category;
-    //     })
-    //   )
-    // })
-  // }, []);
+function App({ setCategories,setProducts }) {
+  const [loading,setLoading] = useState(false);
+  useEffect( () => {
+    setLoading(true);
+    Promise.all([
+      fetch(`${config.backendURL}/categories`).then( res => res.json()),
+      fetch(`${config.backendURL}/products`).then( res => res.json())
+    ])
+    .then( arr => {
+      setCategories( 
+        arr[0].map( category => {
+          category["products"] = arr[1].filter( product => product.categoryID === category.categoryID );
+          return category;
+        })
+      )
+      setProducts(arr[1]);
+      setLoading(false);
+    })
+  }, []);
 
   const [cartItems,setCartItems] = useState([]);
   const handleCartItems = newCartItems => {
@@ -49,15 +49,15 @@ function App({ setCategories }) {
         <Header />
         <div className="contentContainer">
           <div className="content">
-            <Switch>
+            { loading ? <div className="loadingSpin"><Spin size="large" /></div> : <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/ludycakeshop" component={Homepage} />
               <Route exact path="/shop" component={Shop} />
               <Route exact path="/checkout" component={Checkoutpage} />
               <Route exact path='/category/:categoryid' component={Categorypage} />
               <Route exact path='/product/:productid' component={Productpage} />
-              <Route exact path='/bulkorder' component={BulkorderPage} />
-            </Switch>
+              <Route exact path='/bulkorder/:code' component={BulkorderPage} />
+            </Switch> }
           </div>
         </div>
         <Footer />
@@ -67,7 +67,8 @@ function App({ setCategories }) {
 }
 
 const mapDispatchToProps = dispatch => ({
-  setCategories: categories => dispatch(fetchCategories(categories))
+  setCategories: categories => dispatch(fetchCategories(categories)),
+  setProducts: products => dispatch(fetchProducts(products))
 });
 
 export default connect(null, mapDispatchToProps)(App);

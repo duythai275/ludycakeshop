@@ -12,21 +12,32 @@ const Shop = ({ categories, history }) => (
     <div className="shoppingPage">
         {
             categories.map( category => (
-                <div key={category._id} className="category">
+                <div key={category.categoryID} className="category">
                     <h1 className="title">
-                        <Link to={`/category/${category._id}`}>{category.name}</Link>
+                        <Link to={`/category/${category.categoryID}`}>{category.categoryName}</Link>
                     </h1>
                     
                     <div className="items">
                         {
-                            category.products.map( product => 
-                                <div key={product._id} className="item" onClick={() => history.push(`/product/${product._id}`)}>
-                                    <div className="image" style={{ backgroundImage: `url(${config.backendURL}/${product.image}.jpg)` }}/>
+                            category.products.map( product => {
+                                const image = {
+                                    width: "100%",
+                                    height: "95%",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundPosition: "center",
+                                    backgroundSize: "cover",
+                                    marginBottom: "5px",
+                                    border: "1px solid black",
+                                    backgroundImage: `url(data:image;base64,${product.productImage})`
+                                };
+                                return(
+                                <div key={product.productID} className="item" onClick={() => history.push(`/product/${product.productID}`)}>
+                                    <div style={image}/>
                                     <div className="itemFooter">
-                                        <span className="name">{product.name}</span>
-                                        <span className="price">${product.price}</span>
+                                        <span className="name">{product.productName}</span>
+                                        <span className="price">${product.unitPrice}</span>
                                     </div>
-                                </div>
+                                </div>)}
                             )
                         }
                     </div>
