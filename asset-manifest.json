@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d3773b0d.chunk.css",
-    "main.js": "/static/js/main.37940b8e.chunk.js",
-    "main.js.map": "/static/js/main.37940b8e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9724c683.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9724c683.js.map",
-    "static/js/2.2e1ce7db.chunk.js": "/static/js/2.2e1ce7db.chunk.js",
-    "static/js/2.2e1ce7db.chunk.js.map": "/static/js/2.2e1ce7db.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2e1e54f34b28023657fe623bee0dc467.js": "/precache-manifest.2e1e54f34b28023657fe623bee0dc467.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d3773b0d.chunk.css.map": "/static/css/main.d3773b0d.chunk.css.map",
-    "static/js/2.2e1ce7db.chunk.js.LICENSE.txt": "/static/js/2.2e1ce7db.chunk.js.LICENSE.txt",
-    "static/media/location.png": "/static/media/location.b2ffadef.png",
-    "static/media/shopping-bag.30f07071.svg": "/static/media/shopping-bag.30f07071.svg"
+    "main.css": "/ludycakeshop/static/css/main.d3773b0d.chunk.css",
+    "main.js": "/ludycakeshop/static/js/main.09c663ea.chunk.js",
+    "main.js.map": "/ludycakeshop/static/js/main.09c663ea.chunk.js.map",
+    "runtime-main.js": "/ludycakeshop/static/js/runtime-main.dc767c9d.js",
+    "runtime-main.js.map": "/ludycakeshop/static/js/runtime-main.dc767c9d.js.map",
+    "static/js/2.bf958c31.chunk.js": "/ludycakeshop/static/js/2.bf958c31.chunk.js",
+    "static/js/2.bf958c31.chunk.js.map": "/ludycakeshop/static/js/2.bf958c31.chunk.js.map",
+    "index.html": "/ludycakeshop/index.html",
+    "precache-manifest.a2faa3500133da26ab4e8e7becbaf506.js": "/ludycakeshop/precache-manifest.a2faa3500133da26ab4e8e7becbaf506.js",
+    "service-worker.js": "/ludycakeshop/service-worker.js",
+    "static/css/main.d3773b0d.chunk.css.map": "/ludycakeshop/static/css/main.d3773b0d.chunk.css.map",
+    "static/js/2.bf958c31.chunk.js.LICENSE.txt": "/ludycakeshop/static/js/2.bf958c31.chunk.js.LICENSE.txt",
+    "static/media/location.png": "/ludycakeshop/static/media/location.b2ffadef.png",
+    "static/media/shopping-bag.30f07071.svg": "/ludycakeshop/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9724c683.js",
-    "static/js/2.2e1ce7db.chunk.js",
+    "static/js/runtime-main.dc767c9d.js",
+    "static/js/2.bf958c31.chunk.js",
     "static/css/main.d3773b0d.chunk.css",
-    "static/js/main.37940b8e.chunk.js"
+    "static/js/main.09c663ea.chunk.js"
   ]
 }
