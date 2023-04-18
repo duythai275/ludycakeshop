@@ -20,12 +20,12 @@ const Productpage = ({ categories, match }) => {
     const { cartItems, handleCartItems } = useContext(ShoppingContext);
     const [quantity, setQuantity] = useState(1);
 
-    const product = [
-        ...categories[0].products,
-        ...categories[1].products,
-        ...categories[2].products,
-        ...categories[3].products
-    ].find( c => `${c.productID}` === match.params.productid );
+    const product = categories.reduce(
+        (acc,cur) => [
+            ...acc,
+            ...cur.products
+        ]
+    , [] ).find( c => `${c.productID}` === match.params.productid );
 
     const addToCart = () => {
         success();

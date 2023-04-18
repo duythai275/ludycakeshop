@@ -1,6 +1,5 @@
 import React from 'react';
-
-import addressImage from '../../assets/location.png';
+import { Link } from 'react-router-dom';
 
 import './footer.styles.css';
 
@@ -51,11 +50,14 @@ export const Footer = () => (
                 </div>
             </div>
             <div className='blockContact'>
-                <div className="footerTitle">All Categories</div>
+                <div className="footerTitle">Best Sales</div>
                 <div className="footerSubTitle">Cakes Roles</div>
                 <div className="footerSubTitle">Yame Cakes</div>
                 <div className="footerSubTitle">Empanada</div>
                 <div className="footerSubTitle">Breads</div>
+                <br></br>
+                <div className="footerTitle">Bulk Order</div>
+                <Link to="/customer" className="optionBulkOrder"><div>Request Form</div></Link>
             </div>
         </div>
     </div>

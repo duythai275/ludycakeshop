@@ -53,4 +53,13 @@ div.contact {
 .footerSubTitle {
     font-size: 20px;
     margin-top: 5px;
+    cursor: pointer;
+}
+
+.optionBulkOrder {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    font-size: 20px;
 }

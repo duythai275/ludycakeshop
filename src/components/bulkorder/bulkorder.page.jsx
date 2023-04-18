@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, InputNumber, Button, Modal, message } from 'antd';
+import { Input, InputNumber, Button, Modal, message, Spin } from 'antd';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -11,6 +11,7 @@ import './bulkorder.styles.css';
 import {config} from '../../config';
 
 const Bulkorder = ({categories, products, match}) => {
+    const [loading,setLoading] = useState(false);
     const [open,setOpen] = useState(false);
     const [email, setEmail] = useState("");
     const [historicalOrders, setHistoricalOrders] = useState([]);
@@ -38,6 +39,7 @@ const Bulkorder = ({categories, products, match}) => {
 
     useEffect(() => {
         if ( email && email != "" ) {
+            setLoading(true);
             fetch(`${config.backendURL}/orders?email=${email}`)
             .then( res => res.json())
             .then( arr => {
@@ -49,6 +51,7 @@ const Bulkorder = ({categories, products, match}) => {
                     },
                     itemTotal: 0
                 }) ));
+                setLoading(false);
             });
         }
     }, [email]); 
@@ -143,7 +146,7 @@ const Bulkorder = ({categories, products, match}) => {
         
     }
 
-    return <>
+    return loading ? <div className="loadingSpin"><Spin size="large" /></div> : <>
         {contextHolder}
         <div className="submitBulkOrder">
             <Button type="link" size={'large'} onClick={() => setOpen(true)}>

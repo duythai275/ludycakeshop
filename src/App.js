@@ -14,6 +14,7 @@ import Productpage from './components/productpage/product.page';
 import BulkorderPage from './components/bulkorder/bulkorder.page';
 import ShoppingContext from './contexts/shoppingCart.context';
 import Checkoutpage from './components/checkoutPage/checkout.page';
+import Customer from './components/customer/customer.page';
 import { fetchCategories } from './redux/category/category.action';
 import { fetchProducts } from './redux/product/product.action';
 import { Spin } from 'antd';
@@ -56,7 +57,8 @@ function App({ setCategories,setProducts }) {
               <Route exact path="/checkout" component={Checkoutpage} />
               <Route exact path='/category/:categoryid' component={Categorypage} />
               <Route exact path='/product/:productid' component={Productpage} />
-              <Route exact path='/bulkorder/:code' component={BulkorderPage} />
+              <Route exact path='/customer' component={Customer} />
+              <Route path='/bulkorder/:code' component={BulkorderPage} />
             </Switch> }
           </div>
         </div>
